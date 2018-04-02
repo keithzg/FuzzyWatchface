@@ -271,7 +271,7 @@ public class FuzzyTime extends CanvasWatchFaceService {
 
 //            mXOffset = (canvas.getWidth() / 2) - (text.length() * 2);
             mXOffset = (canvas.getWidth() / 2) - (mTextPaint.measureText(text) / 2);
-            android.util.Log.d("Fuzzy", "Set X offset at " + mXOffset + " from canvas width " + canvas.getWidth() + " and length " + mTextPaint.measureText(text));
+            android.util.Log.d("Fuzzy", "Set X offset at " + mXOffset + " from canvas width " + canvas.getWidth() + " and length " + mTextPaint.measureText(text)); // I should probably redo this bearing https://stackoverflow.com/a/42091739 in mind
             mYOffset = (canvas.getHeight() / 2) - (mTextPaint.descent() + mTextPaint.ascent()) / 2; // Cribbed from https://stackoverflow.com/a/11121873
             canvas.drawText(text, mXOffset, mYOffset, mTextPaint);
 
