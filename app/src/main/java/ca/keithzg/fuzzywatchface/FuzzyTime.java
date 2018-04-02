@@ -37,8 +37,10 @@ import java.util.concurrent.TimeUnit;
  * https://codelabs.developers.google.com/codelabs/watchface/index.html#0
  */
 public class FuzzyTime extends CanvasWatchFaceService {
-    private static final Typeface NORMAL_TYPEFACE =
-            Typeface.create(Typeface.SANS_SERIF, Typeface.NORMAL);
+//    private static final Typeface NORMAL_TYPEFACE =
+//            Typeface.create(Typeface.SANS_SERIF, Typeface.NORMAL);
+    private Typeface NORMAL_TYPEFACE =
+        Typeface.create(Typeface.SANS_SERIF, Typeface.NORMAL);
 
     /**
      * Update rate in milliseconds for interactive mode. Defaults to one second
@@ -126,6 +128,11 @@ public class FuzzyTime extends CanvasWatchFaceService {
             mTextPaint.setColor(
                     ContextCompat.getColor(getApplicationContext(), R.color.digital_text));
 //            mTextPaint.setTextAlign(Paint.Align.CENTER);
+            Typeface bungee_outline = Typeface.createFromAsset(getAssets(),"bungee_outline_regular.ttf");
+            Typeface bungee_hairline = Typeface.createFromAsset(getAssets(),"bungee_hairline_regular.ttf");
+            Typeface muli_extralight = Typeface.createFromAsset(getAssets(),"muli_extralight.ttf");
+            Typeface muli_light = Typeface.createFromAsset(getAssets(),"muli_light.ttf");
+            mTextPaint.setTypeface(muli_extralight);
         }
 
         @Override
@@ -180,7 +187,7 @@ public class FuzzyTime extends CanvasWatchFaceService {
             mXOffset = resources.getDimension(isRound
                     ? R.dimen.digital_x_offset_round : R.dimen.digital_x_offset);
             float textSize = resources.getDimension(isRound
-                    ? R.dimen.digital_text_size_round_big : R.dimen.digital_text_size);
+                    ? R.dimen.digital_text_size_round : R.dimen.digital_text_size);
 
             mTextPaint.setTextSize(textSize);
         }
