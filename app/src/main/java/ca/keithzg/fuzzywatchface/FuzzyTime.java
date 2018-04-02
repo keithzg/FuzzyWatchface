@@ -125,6 +125,7 @@ public class FuzzyTime extends CanvasWatchFaceService {
             mTextPaint.setAntiAlias(true);
             mTextPaint.setColor(
                     ContextCompat.getColor(getApplicationContext(), R.color.digital_text));
+//            mTextPaint.setTextAlign(Paint.Align.CENTER);
         }
 
         @Override
@@ -179,7 +180,7 @@ public class FuzzyTime extends CanvasWatchFaceService {
             mXOffset = resources.getDimension(isRound
                     ? R.dimen.digital_x_offset_round : R.dimen.digital_x_offset);
             float textSize = resources.getDimension(isRound
-                    ? R.dimen.digital_text_size_round : R.dimen.digital_text_size);
+                    ? R.dimen.digital_text_size_round_big : R.dimen.digital_text_size);
 
             mTextPaint.setTextSize(textSize);
         }
@@ -247,12 +248,26 @@ public class FuzzyTime extends CanvasWatchFaceService {
             long now = System.currentTimeMillis();
             mCalendar.setTimeInMillis(now);
 
-            String text = mAmbient
-                    ? String.format("%d:%02d", mCalendar.get(Calendar.HOUR),
-                    mCalendar.get(Calendar.MINUTE))
-                    : String.format("%d:%02d:%02d", mCalendar.get(Calendar.HOUR),
-                    mCalendar.get(Calendar.MINUTE), mCalendar.get(Calendar.SECOND));
+            String text = "???";
+            int hour = mCalendar.get(Calendar.HOUR_OF_DAY);
+
+            if ((hour < 6) || (hour > 21)) {
+                text = "night";
+//                mTextPaint.setTextSize(R.dimen.digital_text_size_round);
+            } else if (hour < 17) {
+                text = "day";
+            } else if (hour >= 17) {
+                text = "evening";
+            }
+
+//            text = Integer.toString(text.length());
+
+//            mXOffset = (canvas.getWidth() / 2) - (text.length() * 2);
+            mXOffset = (canvas.getWidth() / 2) - (mTextPaint.measureText(text) / 2);
+            android.util.Log.d("Fuzzy", "Set X offset at " + mXOffset + " from canvas width " + canvas.getWidth() + " and length " + mTextPaint.measureText(text));
+            mYOffset = (canvas.getHeight() / 2) - (mTextPaint.descent() + mTextPaint.ascent()) / 2; // Cribbed from https://stackoverflow.com/a/11121873
             canvas.drawText(text, mXOffset, mYOffset, mTextPaint);
+
         }
 
         /**
