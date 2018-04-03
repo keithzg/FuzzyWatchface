@@ -2,4 +2,5 @@
     <string name="app_name">FuzzyWatchface</string>
     <string name="message">Watch face tapped</string>
     <string name="watchface_name">Fuzzy Time</string>
+    <string name="config_name">Fuzzy Config</string>
 </resources>
