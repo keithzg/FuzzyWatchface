@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.wear.widget.WearableRecyclerView;
+import android.support.wearable.complications.ComplicationProviderInfo;
+import android.support.wearable.complications.ProviderChooserIntent;
 import android.util.Log;
 
 public class ConfigActivity extends Activity {
@@ -35,7 +37,7 @@ public class ConfigActivity extends Activity {
         mWearableRecyclerView.setHasFixedSize(true);
 
         mAdapter = new ConfigWearableAdapter(
-                getApplicationContext()
+                getApplicationContext(), ConfigData.getDataToPopulateAdapter(this)
         );
 
         mWearableRecyclerView.setAdapter(mAdapter);

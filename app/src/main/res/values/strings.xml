@@ -3,4 +3,6 @@
     <string name="message">Watch face tapped</string>
     <string name="watchface_name">Fuzzy Time</string>
     <string name="config_name">Fuzzy Config</string>
+    <string name="config_fuzziness_label">Fuzziness</string>
+    <string name="saved_fuzziness_level">saved_fuzziness_level</string>
 </resources>
