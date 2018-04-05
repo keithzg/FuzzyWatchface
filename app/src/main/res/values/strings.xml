@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">FuzzyWatchface</string>
-    <string name="message">Watch face tapped</string>
-    <string name="watchface_name">Fuzzy Time</string>
-    <string name="config_name">Fuzzy Config</string>
-    <string name="config_fuzziness_label">Fuzziness</string>
-    <string name="saved_fuzziness_level">saved_fuzziness_level</string>
+    <string name="watchface_name" translatable="false">Fuzzy Time</string>
+    <string name="config_name" translatable="false">Fuzzy Config</string>
+    <string name="config_fuzziness_label" translatable="false">Fuzziness</string>
+    <string name="saved_fuzziness_level" translatable="false">saved_fuzziness_level</string>
+
+    <string name="t_day">day</string>
+    <string name="t_night">night</string>
+    <string name="t_evening">evening</string>
+    <string name="t_morning">morning</string>
 </resources>

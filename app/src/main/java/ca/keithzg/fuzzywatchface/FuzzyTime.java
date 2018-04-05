@@ -128,10 +128,7 @@ public class FuzzyTime extends CanvasWatchFaceService {
             mTextPaint.setColor(
                     ContextCompat.getColor(getApplicationContext(), R.color.digital_text));
 //            mTextPaint.setTextAlign(Paint.Align.CENTER);
-            Typeface bungee_outline = Typeface.createFromAsset(getAssets(),"bungee_outline_regular.ttf");
-            Typeface bungee_hairline = Typeface.createFromAsset(getAssets(),"bungee_hairline_regular.ttf");
             Typeface muli_extralight = Typeface.createFromAsset(getAssets(),"muli_extralight.ttf");
-            Typeface muli_light = Typeface.createFromAsset(getAssets(),"muli_light.ttf");
             mTextPaint.setTypeface(muli_extralight);
         }
 
@@ -236,12 +233,12 @@ public class FuzzyTime extends CanvasWatchFaceService {
             int hour = mCalendar.get(Calendar.HOUR_OF_DAY);
 
             if ((hour < 6) || (hour > 21)) {
-                text = "night";
+                text = getString(R.string.t_night);
 //                mTextPaint.setTextSize(R.dimen.digital_text_size_round);
             } else if (hour < 17) {
-                text = "day";
-            } else if (hour >= 17) {
-                text = "evening";
+                text = getString(R.string.t_day);
+            } else if (hour >= 17) { // Android Studio warns that this is always true. How can it always be true that the hour is greater than 17?
+                text = getString(R.string.t_evening);
             }
 
 //            text = Integer.toString(text.length());
