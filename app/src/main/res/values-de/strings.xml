@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">FuzzyWatchface</string>
-    <string name="t_day">tag</string>
-    <string name="t_night">nacht</string>
-    <string name="t_evening">abend</string>
-    <string name="t_morning">morgen</string>
+    <string name="t_day">Tag</string>
+    <string name="t_night">Nacht</string>
+    <string name="t_evening">Abend</string>
+    <string name="t_morning">Morgen</string>
 </resources>
