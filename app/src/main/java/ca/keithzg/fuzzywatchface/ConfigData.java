@@ -3,6 +3,8 @@ package ca.keithzg.fuzzywatchface;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.wear.widget.WearableRecyclerView;
+import android.util.Log;
+
 import java.util.ArrayList;
 
 import ca.keithzg.fuzzywatchface.ConfigWearableAdapter;
@@ -112,7 +114,7 @@ public class ConfigData {
                         SelectionFuzzinessActivity.class);
         settingsConfigData.add(fuzzinessConfigItem);
 
-
+        Log.e("Fuzzy", "About to return settings "+settingsConfigData);
         return settingsConfigData;
     }
 }

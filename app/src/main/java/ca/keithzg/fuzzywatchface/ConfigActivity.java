@@ -28,18 +28,20 @@ public class ConfigActivity extends Activity {
         mWearableRecyclerView = findViewById(R.id.wearable_recycler_view);
 
         // Aligns the first and last items on the list vertically centered on the screen.
-        mWearableRecyclerView.setEdgeItemsCenteringEnabled(true);
+//        mWearableRecyclerView.setEdgeItemsCenteringEnabled(true);
 
         mWearableRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // Improves performance because we know changes in content do not change the layout size of
         // the RecyclerView.
-        mWearableRecyclerView.setHasFixedSize(true);
+//        mWearableRecyclerView.setHasFixedSize(true);
 
+        Log.e("Fuzzy", "About to declare mAdapter");
         mAdapter = new ConfigWearableAdapter(
                 getApplicationContext(), ConfigData.getDataToPopulateAdapter(this)
         );
 
+        Log.e("Fuzzy", "About to run .setAdapter()");
         mWearableRecyclerView.setAdapter(mAdapter);
 
     }
