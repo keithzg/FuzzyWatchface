@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import java.lang.ref.WeakReference;
 import java.util.Calendar;
+import java.util.Random;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
@@ -230,6 +231,7 @@ public class FuzzyTime extends CanvasWatchFaceService {
             mCalendar.setTimeInMillis(now);
 
             String text = "???";
+            Boolean noise = true;
             int hour = mCalendar.get(Calendar.HOUR_OF_DAY);
 
             if ((hour < 6) || (hour > 21)) {
@@ -239,6 +241,14 @@ public class FuzzyTime extends CanvasWatchFaceService {
                 text = getString(R.string.t_day);
             } else if (hour >= 17) { // Android Studio warns that this is always true. How can it always be true that the hour is greater than 17?
                 text = getString(R.string.t_evening);
+            }
+
+            if (noise == true) {
+                Random r = new Random();
+                int npossible = r.nextInt(100);
+                if (npossible < 50) {
+                    text = getString(R.string.t_random_placeholder);
+                }
             }
 
 //            text = Integer.toString(text.length());

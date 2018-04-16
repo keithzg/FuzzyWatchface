@@ -114,7 +114,7 @@ public class ConfigData {
                         SelectionFuzzinessActivity.class);
         settingsConfigData.add(fuzzinessConfigItem);
 
-        Log.e("Fuzzy", "About to return settings "+settingsConfigData);
+//        Log.e("Fuzzy", "About to return settings "+settingsConfigData);
         return settingsConfigData;
     }
 }

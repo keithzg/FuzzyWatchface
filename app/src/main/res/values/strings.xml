@@ -10,5 +10,7 @@
     <string name="t_evening">evening</string>
     <string name="t_morning">morning</string>
 
-    <string name="analog_complication_preference_file_key">PLACEHOLDER</string>
+    <string name="t_random_placeholder">today</string>
+
+    <string name="analog_complication_preference_file_key" translatable="false">PLACEHOLDER</string>
 </resources>

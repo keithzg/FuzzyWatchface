@@ -5,4 +5,5 @@
     <string name="t_night">nacht</string>
     <string name="t_evening">abend</string>
     <string name="t_morning">morgen</string>
+    <string name="t_random_placeholder">heute</string>
 </resources>
