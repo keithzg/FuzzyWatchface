@@ -6,4 +6,7 @@
     <string name="t_evening">Abend</string>
     <string name="t_morning">Morgen</string>
     <string name="t_random_placeholder">Heute</string>
+
+    <string name="t_random_today">Heute</string>
+    <string name="t_random_now">Jetzt</string>
 </resources>

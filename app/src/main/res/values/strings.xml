@@ -12,5 +12,20 @@
 
     <string name="t_random_placeholder">today</string>
 
+    <string name="t_random_today">today</string>
+    <string name="t_random_now">now</string>
+    <string name="t_random_smiley" translatable="false">:)</string>
+    <string name="t_random_shruggie" translatable="false">¯\\_(ツ)_/¯</string>
+
+
+
+    <string-array name="t_random_items">
+        <item>@string/t_random_now</item>
+        <item>@string/t_random_today</item>
+        <item>@string/t_random_smiley</item>
+        <item>@string/t_random_shruggie</item>
+        <item></item>
+    </string-array>
+
     <string name="analog_complication_preference_file_key" translatable="false">PLACEHOLDER</string>
 </resources>

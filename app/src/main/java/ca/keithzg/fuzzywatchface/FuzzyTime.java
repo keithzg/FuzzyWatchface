@@ -246,8 +246,8 @@ public class FuzzyTime extends CanvasWatchFaceService {
             if (noise == true) {
                 Random r = new Random();
                 int npossible = r.nextInt(100);
-                if (npossible < 50) {
-                    text = getString(R.string.t_random_placeholder);
+                if (npossible <= getResources().getStringArray(R.array.t_random_items).length) {
+                    text  = getResources().getStringArray(R.array.t_random_items)[npossible];
                 }
             }
 
