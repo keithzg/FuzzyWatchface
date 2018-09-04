@@ -5,6 +5,6 @@ Is your fancy smartwatch doing too good of a job telling you the actual time? Ar
 
 ## TODO
 * Actually be able to configure things (look it's weirdly hard okay?)
-* If I leave the watch for a while and look back at it, the text _is_ actually aligned perfectly in the center vertically, but then when I tap the screen and it turns back on everything shifts down slightly, what's _that_ about?
+* If I leave the watch for a while and look back at it, the text _is_ actually aligned perfectly in the center vertically, but then when I tap the screen and it turns back on everything shifts down slightly, what's _that_ about? (Admittedly both my Android watches seem to do that even with other watchfaces so maybe it's not my problem at all)
 * I should use https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts.html rather than bundling fonts
 * Use Github issues instead of writing a todo list in my readme for some reason
